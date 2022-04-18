@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Footer from '../../footer'
+import Header from '../../header'
 
 const MainLayout = ({ seo, children }) => {
   const { title } = seo
@@ -9,10 +10,11 @@ const MainLayout = ({ seo, children }) => {
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico"/>
       </Head>
+      <Header/>
       <main>
         {children}
       </main>
-      <Footer />
+      <Footer/>
     </div>
   )
 }
