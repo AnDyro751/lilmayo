@@ -18,7 +18,11 @@ const Header = () => {
     <header className="py-8 px-20 bg-black flex items-center">
       <div className="w-4/12">
         <div className="relative h-20 w-20">
-          <Image src={logo} layout="fill"/>
+          <Image
+            placeholder="blur"
+            blurDataURL="https://res.cloudinary.com/healthbox/image/upload/c_scale,e_blur:100,w_53/v1650320119/lilmayo/logo_cmw53n.webp"
+            src="https://res.cloudinary.com/healthbox/image/upload/v1650320119/lilmayo/logo_cmw53n.webp" layout="fill"
+          />
         </div>
       </div>
       <div className="w-6/12 justify-end flex items-center space-x-3">
