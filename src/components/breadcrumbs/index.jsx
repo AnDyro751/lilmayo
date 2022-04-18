@@ -3,7 +3,7 @@ import React from 'react'
 
 const Breadcrumbs = ({ data }) => {
   return (
-    <nav aria-label="Breadcrumb" className="py-10 px-20">
+    <nav aria-label="Breadcrumb" className="py-10 px-40">
       <ol role="list" className="flex items-center space-x-1 text-sm text-gray-500">
         <li>
           <Link href="/">

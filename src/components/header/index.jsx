@@ -38,7 +38,7 @@ const Header = () => {
           />
         </div>
         <div className="ml-2">
-          {loading ? '...' : cartCount}
+          <span id="cart-quantity">{loading ? '...' : cartCount}</span>
         </div>
       </div>
     </header>

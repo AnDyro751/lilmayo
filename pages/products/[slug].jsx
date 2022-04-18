@@ -1,7 +1,9 @@
 import MainLayout from '../../src/components/layouts/main'
 import allProducts from '../../src/utils/products'
 import getProduct from '../../src/utils/products/get'
+import dynamic from 'next/dynamic'
 
+const ProductFullItem = dynamic(() => import('../../src/components/products/fullItem'))
 const ProductPage = ({ product }) => {
   return (
     <MainLayout
@@ -19,7 +21,7 @@ const ProductPage = ({ product }) => {
       }
       seo={{ title: product.name }}
     >
-      <h1>HOLA Producto</h1>
+      <ProductFullItem product={product}/>
     </MainLayout>
   )
 }
