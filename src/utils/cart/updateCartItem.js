@@ -25,7 +25,6 @@ export default async function updateCartItem (slug, quantity) {
       return parseInt(el) + parseInt(el2)
     })
   } catch (e) {
-    console.log(e, "A")
     return 0
   }
 }

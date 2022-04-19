@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import updateCartItem from '../../utils/cart/updateCartItem'
+import deleteItem from '../../utils/cart/deleteItem'
 
-const CartProduct = ({ product }) => {
+const CartProduct = ({ product, handleDelete }) => {
   const [quantity, setQuantity] = useState(product.quantity || 1)
   const handleChange = (e) => {
     setQuantity(e.target.value || 1)
@@ -11,6 +12,11 @@ const CartProduct = ({ product }) => {
 
   const updateStorage = async () => {
     document.querySelector('#cart-quantity').innerHTML = await updateCartItem(product.slug, quantity)
+  }
+
+  const onHandleDelete = async () => {
+    document.querySelector('#cart-quantity').innerHTML = await deleteItem(product.slug)
+    handleDelete(product.slug)
   }
 
   useEffect(() => {
@@ -39,6 +45,11 @@ const CartProduct = ({ product }) => {
             </a>
           </Link>
         </div>
+        <div className="w-full mt-2">
+          <span className="text-gray-600">
+            ${product.price.toFixed(2)}
+          </span>
+        </div>
         <div className="w-4/12 mt-2">
           <label className="text-sm text-gray-600" htmlFor={`quantity_${product.slug}`}>
             Quantity
@@ -52,6 +63,9 @@ const CartProduct = ({ product }) => {
             value={quantity}
             className="w-full mt-1 p-3 mt-1 text-sm border-2 border-gray-200 rounded"
           />
+        </div>
+        <div className="w-full mt-2">
+          <button onClick={onHandleDelete} className="text-red-600 text-xs p-1">Remove</button>
         </div>
       </div>
     </article>

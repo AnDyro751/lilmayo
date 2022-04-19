@@ -3,7 +3,8 @@ import { CART_KEY } from './getTotalCartCount'
 export default async function addItemToCart (product, quantity = 1) {
   const addedItem = {
     slug: product.slug,
-    quantity: quantity
+    quantity: quantity,
+    price: product.price
   }
   const item = localStorage.getItem(CART_KEY)
   try {
