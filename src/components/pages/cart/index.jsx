@@ -5,10 +5,12 @@ import { toast } from 'react-hot-toast'
 import Image from 'next/image'
 import logos from '../../../../public/Logos-01.png'
 import getAllProducts from '../../../utils/cart/getAllProducts'
+import getTotalPrice from '../../../utils/cart/getTotalPrice'
 
 const CartPageComponent = ({ products = [] }) => {
   const [allProducts, setAllProducts] = useState(products)
   const [total, setTotal] = useState(0)
+  const [loading, setLoading] = useState(false)
   const onHandleDelete = (slug) => {
     const newProducts = allProducts.filter((el) => el.slug !== slug)
     setAllProducts(newProducts)
@@ -16,17 +18,35 @@ const CartPageComponent = ({ products = [] }) => {
   }
 
   useEffect(() => {
-    const allproducts = getAllProducts()
-    let total = 0;
-    allproducts.map((element)=> {
-      total += element.price * parseInt(element.quantity)
-    })
-    setTotal(total)
+    setTotal(getTotalPrice())
   }, [])
 
   useEffect(() => {
     setAllProducts(products)
   }, [products])
+
+  const onPay = async () => {
+    setLoading(true)
+    try {
+      const createPaymentLinkResponse = await (await fetch('/api/checkout', {
+        method: 'POST',
+        body: JSON.stringify({
+          products: getAllProducts()
+        })
+      })).json()
+      if (createPaymentLinkResponse.errors.length >= 1) {
+        setLoading(false)
+        // toast.error(createPaymentLinkResponse.errors[0] || 'There was an error')
+        console.log(createPaymentLinkResponse, "L")
+        return
+      }
+      toast.success('Redirecting to payment page')
+      window.location = createPaymentLinkResponse.url
+    } catch (e) {
+      setLoading(false)
+      toast.error('There was an error while paying')
+    }
+  }
 
   return (
     <section className="px-40">
@@ -64,6 +84,8 @@ const CartPageComponent = ({ products = [] }) => {
               <p className="text-lg mt-4 text-gray-600 font-light">Calculated on the payment page</p>
               <div className="w-full mt-8">
                 <button
+                  disabled={loading}
+                  onClick={onPay}
                   className="focus:outline-0 outline-0 disabled:cursor-not-allowed disabled:bg-amber-600 disabled:text-white disabled:opacity-60 w-full text-center justify-center inline-flex items-center px-8 py-3 text-white bg-amber-600 border border-amber-600 rounded hover:bg-transparent hover:text-amber-600 active:text-amber-500 focus:outline-none focus:ring"
                 >
                   Go Pay

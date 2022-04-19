@@ -3,19 +3,36 @@ import Image from 'next/image'
 import Link from 'next/link'
 import updateCartItem from '../../utils/cart/updateCartItem'
 import deleteItem from '../../utils/cart/deleteItem'
+import getTotalPrice from '../../utils/cart/getTotalPrice'
 
 const CartProduct = ({ product, handleDelete }) => {
   const [quantity, setQuantity] = useState(product.quantity || 1)
   const handleChange = (e) => {
-    setQuantity(e.target.value || 1)
+    const value = e.target.value
+    try {
+      if (!value) {
+        setQuantity(1)
+        return
+      }
+      if (parseInt(value) <= 0) {
+        setQuantity(1)
+        return
+      }
+      setQuantity(value || 1)
+    } catch (e) {
+      setQuantity(1)
+    }
   }
 
   const updateStorage = async () => {
     document.querySelector('#cart-quantity').innerHTML = await updateCartItem(product.slug, quantity)
+    document.querySelector('#cart-total').innerHTML = `$${getTotalPrice().toFixed(2)}`
   }
 
   const onHandleDelete = async () => {
     document.querySelector('#cart-quantity').innerHTML = await deleteItem(product.slug)
+    document.querySelector('#cart-total').innerHTML = `$${getTotalPrice().toFixed(2)}`
+
     handleDelete(product.slug)
   }
 
