@@ -1,3 +1,5 @@
+import allProducts from '../../src/utils/products'
+
 const stripe = require('stripe')('sk_test_51Kq7WVJiKjtN9wFf6allWS2JNyFfYLAsiQPUb3nMzBNwUgsnFqiEEDwkt5NTFW2zuA8TlM2I4gD1spLmEidG9rjg00Jw3xB8Xk')
 
 export default async function handler (req, res) {
@@ -6,7 +8,16 @@ export default async function handler (req, res) {
   }
   const allItems = []
   const products = JSON.parse(req.body).products
-  products.map((product) => {
+  const fetchedProducts = allProducts()
+  const validProducts = []
+  fetchedProducts.map((product) => {
+    const item = products.find((el) => el.slug === product.slug)
+    if (item) {
+      validProducts.push(item)
+    }
+  })
+
+  validProducts.map((product) => {
     const newItem = {
       price_data: {
         currency: 'usd',
@@ -19,7 +30,6 @@ export default async function handler (req, res) {
     }
     allItems.push(newItem)
   })
-  console.log(allItems, "ALL", products)
   try {
     const session = await stripe.checkout.sessions.create({
       line_items: allItems,
