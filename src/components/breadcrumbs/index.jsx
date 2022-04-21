@@ -3,8 +3,8 @@ import React from 'react'
 
 const Breadcrumbs = ({ data }) => {
   return (
-    <nav aria-label="Breadcrumb" className="py-10 px-40">
-      <ol role="list" className="flex items-center space-x-1 text-sm text-gray-500">
+    <nav aria-label="Breadcrumb" className="py-4 px-4 lg:py-10 lg:px-40 flex ">
+      <ol role="list" className="flex items-center space-x-1 text-sm text-gray-500 text-ellipsis overflow-hidden">
         <li>
           <Link href="/">
             <a className="block transition-colors hover:text-gray-700">
@@ -31,7 +31,7 @@ const Breadcrumbs = ({ data }) => {
               </li>
               <li>
                 <Link href={element.href}>
-                  <a className="block transition-colors hover:text-gray-700"> {element.text} </a>
+                  <a className="block transition-colors hover:text-gray-700 truncate hover:text-clip"> {element.text}</a>
                 </Link>
               </li>
             </React.Fragment>
