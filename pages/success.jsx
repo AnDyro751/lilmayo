@@ -7,8 +7,10 @@ import { CART_KEY } from '../src/utils/cart/getTotalCartCount'
 export default function SuccessPage ({}) {
 
   useEffect(() => {
-    localStorage.removeItem(CART_KEY)
-    document.querySelector('#cart-quantity').innerHTML = '0'
+    setTimeout(() => {
+      localStorage.removeItem(CART_KEY)
+      document.querySelector('#cart-quantity').innerHTML = '0'
+    }, 4000)
   }, [])
 
   return (
