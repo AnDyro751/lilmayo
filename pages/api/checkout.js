@@ -46,8 +46,8 @@ export default async function handler (req, res) {
         },
       ],
       mode: 'payment',
-      success_url: 'https://example.com/success',
-      cancel_url: 'https://example.com/cancel',
+      success_url: 'https://lilmayo.vercel.app/success',
+      cancel_url: 'https://lilmayo.vercel.app/cart',
     })
 
     res.status(200).json({ url: session.url, errors: [] })
