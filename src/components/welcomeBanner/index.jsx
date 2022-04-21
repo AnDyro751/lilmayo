@@ -27,7 +27,7 @@ const WelcomeBanner = () => {
                 Buy your own lifesize alien doll - Worldwide shipping
               </p>
 
-              <Link href="/products/lil-mayo-alien-doll">
+              <Link href="/dolls/lil-mayo-alien-doll">
                 <a
                   className="mt-8 relative inline-block text-sm lg:font-medium text-orange-600 group active:text-orange-500 focus:outline-none focus:ring"
                 >

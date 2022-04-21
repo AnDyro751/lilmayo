@@ -56,7 +56,7 @@ const CartProduct = ({ product, handleDelete }) => {
       </div>
       <div className="10/12 flex flex-wrap">
         <div className="w-full">
-          <Link href={`/products/${product.slug}`}>
+          <Link href={`/dolls/${product.slug}`}>
             <a className="text-normal lg:text-lg">
               {product.name}
             </a>

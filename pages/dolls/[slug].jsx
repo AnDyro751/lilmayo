@@ -10,11 +10,11 @@ const ProductPage = ({ product }) => {
       breadcrumbs={
         [
           {
-            href: `/products`,
+            href: `/dolls`,
             text: 'Products'
           },
           {
-            href: `/products/${product.slug}`,
+            href: `/dolls/${product.slug}`,
             text: product.name
           }
         ]
