@@ -57,10 +57,10 @@ const Header = () => {
                     <Link href="/">
                       <a className="px-6 py-3"> Home </a>
                     </Link>
-                    <Link href="/">
+                    <Link href="/dolls">
                       <a className="px-6 py-3"> Dolls </a>
                     </Link>
-                    <Link href="/">
+                    <Link href="/reviews">
                       <a className="px-6 py-3"> Reviews </a>
                     </Link>
                   </nav>
