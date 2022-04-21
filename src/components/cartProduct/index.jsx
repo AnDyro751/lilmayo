@@ -41,9 +41,9 @@ const CartProduct = ({ product, handleDelete }) => {
   }, [quantity])
 
   return (
-    <article className="flex space-x-6">
+    <article className="flex space-x-4 lg:space-x-6">
       <div className="w-auto">
-        <div className="bg-gray-100 border border-black rounded h-20 w-20 relative">
+        <div className="bg-gray-100 border border-black rounded h-16 w-16 lg:h-20 lg:w-20 relative">
           <Image
             className="h-20 w-20 rounded"
             src={product.images[0]}
@@ -57,17 +57,17 @@ const CartProduct = ({ product, handleDelete }) => {
       <div className="10/12 flex flex-wrap">
         <div className="w-full">
           <Link href={`/products/${product.slug}`}>
-            <a className="text-lg">
+            <a className="text-normal lg:text-lg">
               {product.name}
             </a>
           </Link>
         </div>
         <div className="w-full mt-2">
-          <span className="text-gray-600">
+          <span className="text-gray-600 text-sm">
             ${product.price.toFixed(2)}
           </span>
         </div>
-        <div className="w-4/12 mt-2">
+        <div className="w-8/12 lg:w-4/12 mt-2">
           <label className="text-sm text-gray-600" htmlFor={`quantity_${product.slug}`}>
             Quantity
           </label>

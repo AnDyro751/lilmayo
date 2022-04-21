@@ -49,12 +49,12 @@ const CartPageComponent = ({ products = [] }) => {
   }
 
   return (
-    <section className="px-40">
+    <section className="px-4 lg:px-40">
       {
         allProducts.length > 0 &&
         (
-          <div className="py-14">
-            <h1 className="text-3xl font-medium">Products in your cart</h1>
+          <div className="py-4 lg:py-14">
+            <h1 className="text-2xl lg:text-3xl font-medium">Products in your cart</h1>
           </div>
         )
       }
@@ -67,21 +67,21 @@ const CartPageComponent = ({ products = [] }) => {
       }
       {
         allProducts.length >= 1 && (
-          <section className="flex">
-            <div className="space-y-12 w-8/12">
+          <section className="flex lg:flex-nowrap flex-wrap">
+            <div className="space-y-12 w-full lg:w-8/12">
               {
                 allProducts.map((product, i) => (
                   <CartProduct handleDelete={onHandleDelete} product={product} key={i}/>
                 ))
               }
             </div>
-            <div className="w-4/12">
-              <p className="text-3xl font-medium">Subtotal:</p>
-              <p className="text-lg mt-4 text-gray-600 font-light">
+            <div className="mt-8 lg:mt-0 lg:w-4/12 w-full">
+              <p className="text-2xl lg:text-3xl font-medium">Subtotal:</p>
+              <p className="text-normal lg:text-lg mt-4 text-gray-600 font-light">
                 <span id="cart-total">${total.toFixed(2)}</span>
               </p>
-              <p className="text-3xl font-medium mt-8">Shipping:</p>
-              <p className="text-lg mt-4 text-gray-600 font-light">Calculated on the payment page</p>
+              <p className="text-2xl lg:text-3xl font-medium mt-8">Shipping:</p>
+              <p className="text-normal lg:text-lg mt-4 text-gray-600 font-light">Calculated on the payment page</p>
               <div className="w-full mt-8">
                 <button
                   disabled={loading}
