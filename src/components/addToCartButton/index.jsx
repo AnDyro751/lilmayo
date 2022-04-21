@@ -14,7 +14,7 @@ const AddToCartButton = ({ product, quantity }) => {
   }
 
   return (
-    <div className="w-8/12">
+    <div className="w-full lg:w-8/12">
       <button
         onClick={handleClick}
         disabled={loading}

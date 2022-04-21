@@ -71,13 +71,17 @@ const Header = () => {
         )
       }
       <div className="w-full lg:w-4/12">
-        <div className="relative h-12 w-12 lg:h-20 lg:w-20">
-          <Image
-            placeholder="blur"
-            blurDataURL="https://res.cloudinary.com/healthbox/image/upload/c_scale,e_blur:100,w_53/v1650320119/lilmayo/logo_cmw53n.webp"
-            src="https://res.cloudinary.com/healthbox/image/upload/v1650320119/lilmayo/logo_cmw53n.webp" layout="fill"
-          />
-        </div>
+        <Link href="/">
+          <a>
+            <div className="relative h-12 w-12 lg:h-20 lg:w-20">
+              <Image
+                placeholder="blur"
+                blurDataURL="https://res.cloudinary.com/healthbox/image/upload/c_scale,e_blur:100,w_53/v1650320119/lilmayo/logo_cmw53n.webp"
+                src="https://res.cloudinary.com/healthbox/image/upload/v1650320119/lilmayo/logo_cmw53n.webp" layout="fill"
+              />
+            </div>
+          </a>
+        </Link>
       </div>
       <div className="hidden lg:flex lg:w-6/12 justify-end items-center space-x-3">
         <LinkComponent href="/" text="Home"/>

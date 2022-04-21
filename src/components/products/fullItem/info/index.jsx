@@ -21,11 +21,11 @@ const ProductInfo = ({ product }) => {
   }
   return (
     <>
-      <h1 className="text-3xl font-medium">{product.name}</h1>
+      <h1 className="text-2xl lg:text-3xl font-medium mt-8 lg:mt-0">{product.name}</h1>
       <h1 className="font-medium text-xl">${product.price.toFixed(2)}</h1>
       <section className="w-full">
         <label htmlFor="quantity" className="text-sm font-light">Quantity</label>
-        <div className="w-3/12">
+        <div className="w-8/12 lg:w-3/12">
           <input
             type="number"
             id="quantity"
