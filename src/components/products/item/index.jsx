@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const ProductItem = ({ product }) => {
   return (
-    <Link href={`/products/${product.slug}`}>
+    <Link href={`/dolls/${product.slug}`}>
       <a className="block px-2 lg:px-0">
         <div className="flex justify-center">
           <strong className="relative h-6 px-4 text-xs leading-6 text-white uppercase bg-black"> New </strong>
