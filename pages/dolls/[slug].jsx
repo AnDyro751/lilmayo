@@ -19,7 +19,10 @@ const ProductPage = ({ product }) => {
           }
         ]
       }
-      seo={{ title: product.name }}
+      seo={{
+        title: product.name,
+        image: product.images[0]
+    }}
     >
       <ProductFullItem product={product}/>
     </MainLayout>

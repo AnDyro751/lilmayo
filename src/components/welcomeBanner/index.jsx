@@ -2,6 +2,7 @@ import Image from 'next/image'
 import image from '../../../public/banner1.webp'
 import imageCta from '../../../public/aa26bd779bb644934077998e83557a61.jpg'
 import Link from 'next/link'
+import lil from '../../../public/lil.png'
 
 const WelcomeBanner = () => {
   return (
@@ -17,16 +18,25 @@ const WelcomeBanner = () => {
           </div>
         </div>
       </div>
-      <div className="px-4 lg:px-20">
+      <div className="px-4 lg:px-20 relative">
+        <div className="relative w-8/12 hidden lg:block" >
+          <div className="h-full absolute h-xl w-full z-40 rounded-3xl shadow-2xl"
+          style={{
+            "clipPath": "polygon(0 25%, 0 100%, 100% 100%, 56% 67%, 39% 42%)",
+            backgroundColor: "#7d5427"
+          }}
+          >
+          </div>
+        </div>
+        <div className="hidden lg:block lg:absolute h-xxl w-80 lg:-mt-72 lg:ml-24 z-30">
+          <Image src={lil} layout="fill" objectFit="cover" className="shadow-2xl"/>
+        </div>
         <aside
-          className="-mt-12 lg:-mt-20 shadow-[0_4px_0_0_rgba(0,0,0,1)] border-2 border-black rounded-xl lg:rounded-3xl overflow-hidden z-50 overflow-hidden text-white lg:grid bg-gradient-to-r from-orange-400 to-orange-700 lg:grid-cols-2 lg:items-center"
+          className="lg:h-xl -mt-12 lg:-mt-20 shadow-[0_4px_0_0_rgba(0,0,0,1)] border-2 border-black rounded-xl lg:rounded-3xl overflow-hidden z-50 overflow-hidden text-white lg:grid bg-gradient-to-r from-orange-400 to-orange-700 lg:grid-cols-2 lg:items-center"
         >
-          <div className="p-6 lg:p-12 text-center sm:p-16 lg:p-24 lg:text-left">
-            <div className="max-w-lg mx-auto lg:ml-0 lg:pt-12">
-              <p className="text-xl lg:text-3xl font-bold sm:text-4xl">
-                Buy your own lifesize alien doll - Worldwide shipping
-              </p>
 
+          <div className="p-6 lg:p-12 lg:ml-60 lg:-mt-16 text-center sm:p-16 lg:p-8 lg:text-left z-40">
+            <div className="max-w-lg mx-auto lg:ml-0 lg:pt-12">
               <Link href="/dolls/lil-mayo-alien-doll">
                 <a
                   className="mt-8 relative inline-block text-sm lg:font-medium text-orange-600 group active:text-orange-500 focus:outline-none focus:ring"
@@ -39,11 +49,15 @@ const WelcomeBanner = () => {
                   </span>
                 </a>
               </Link>
+              <p className="text-xl lg:text-2xl font-bold sm:text-4xl mt-12">
+                Buy your own lifesize alien doll - Worldwide shipping
+              </p>
+
             </div>
           </div>
 
-          <div className="lg:pt-16">
-            <div className="relative w-full h-36 sm:h-96 lg:h-[350px]">
+          <div className="lg:pt-16 z-40">
+            <div className="relative w-full h-36 sm:h-96 lg:h-[450px]">
               <Image
                 src={imageCta}
                 draggable={false}
