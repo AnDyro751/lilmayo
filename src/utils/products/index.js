@@ -1,13 +1,45 @@
 const allProducts = () => {
   return [
     {
-      id: '6947314204720',
-      node: '1654636082442',
-      slug: 'alien-mask-area-51',
-      name: 'Alien Mask - Area 51',
+      id: '6947309879344',
+      node: '1654636120767',
+      slug: 'lil-mayo-alien-doll-premium-lifesize-alien-prop',
+      name: 'Lil Mayo Alien Doll - Premium Lifesize Alien prop',
+      price: 319,
+      images: [
+        'https://res.cloudinary.com/healthbox/image/upload/v1654637161/lilmayo/999_gdbu5g.jpg',
+        'https://res.cloudinary.com/healthbox/image/upload/v1654637163/lilmayo/9999999999999999_ryvlcu.jpg',
+        'https://res.cloudinary.com/healthbox/image/upload/v1654637164/lilmayo/99_eqde9m.jpg',
+        'https://res.cloudinary.com/healthbox/image/upload/v1654637165/lilmayo/999999999_lufgju.jpg',
+        'https://res.cloudinary.com/healthbox/image/upload/v1654637167/lilmayo/prime_odxt8j.jpg'
+      ],
+      description: `
+        <p data-mce-fragment="1">Lil Mayo doll - Premium Alien - Lifesize Alien Prop</p>
+        <p data-mce-fragment="1">Rubber Latex Alien doll</p>
+        <p data-mce-fragment="1">Foam Filled </p>
+        <p data-mce-fragment="1">Height: 3.8ft.</p>
+        <p data-mce-fragment="1">Weight: 6lbs. Approx.</p>
+        <br data-cke-eol="1" data-mce-fragment="1">
+`
+    },
+    {
+      id: '6947312926768',
+      node: '1654636120767',
+      slug: 'mini-lil-mayo-alien-doll-mini-size',
+      name: 'Mini Lil Mayo Alien Doll  - Mini Size',
       price: 99,
-      description: '<p>Rubber Mask</p>',
-      images: ['https://res.cloudinary.com/healthbox/image/upload/v1654636774/lilmayo/alienmask_mljgzs.jpg']
+      images: [
+        'https://res.cloudinary.com/healthbox/image/upload/v1654637356/lilmayo/4x4_ogdhwl.jpg',
+        'https://res.cloudinary.com/healthbox/image/upload/v1654637357/lilmayo/Sintitulo-3_kxpj2c.jpg',
+        'https://res.cloudinary.com/healthbox/image/upload/v1654637358/lilmayo/Sintitulo-6_sblgc8.jpg'
+      ],
+      description: `
+        <p data-mce-fragment="1">Mini Alien Prop - Mini Lil Mayo Alien Doll</p>
+        <p data-mce-fragment="1">Rubber Latex Alien doll</p>
+        <p data-mce-fragment="1">Height: 19 Inches (50cm)</p>
+        <p data-mce-fragment="1">Limited supply. </p>
+        <p data-mce-fragment="1">Weight: 1 lbs. Approx.</p>
+`
     },
     {
       id: '6947311910960',
@@ -25,6 +57,15 @@ const allProducts = () => {
         <p data-mce-fragment="1">40 inches.</p>
         <br data-cke-eol="1" data-mce-fragment="1">
         `
+    },
+    {
+      id: '6947314204720',
+      node: '1654636082442',
+      slug: 'alien-mask-area-51',
+      name: 'Alien Mask - Area 51',
+      price: 99,
+      description: '<p>Rubber Mask</p>',
+      images: ['https://res.cloudinary.com/healthbox/image/upload/v1654636774/lilmayo/alienmask_mljgzs.jpg']
     },
     {
       id: '6947315253296',
@@ -54,28 +95,7 @@ const allProducts = () => {
       description: `<p>Dinosaur Mark 100% Rubber Latex</p>
 `
     },
-    {
-      id: '6947309879344',
-      node: '1654636120767',
-      slug: 'lil-mayo-alien-doll-premium-lifesize-alien-prop',
-      name: 'Lil Mayo Alien Doll - Premium Lifesize Alien prop',
-      price: 319,
-      images: [
-        'https://res.cloudinary.com/healthbox/image/upload/v1654637161/lilmayo/999_gdbu5g.jpg',
-        'https://res.cloudinary.com/healthbox/image/upload/v1654637163/lilmayo/9999999999999999_ryvlcu.jpg',
-        'https://res.cloudinary.com/healthbox/image/upload/v1654637164/lilmayo/99_eqde9m.jpg',
-        'https://res.cloudinary.com/healthbox/image/upload/v1654637165/lilmayo/999999999_lufgju.jpg',
-        'https://res.cloudinary.com/healthbox/image/upload/v1654637167/lilmayo/prime_odxt8j.jpg'
-      ],
-      description: `
-        <p data-mce-fragment="1">Lil Mayo doll - Premium Alien - Lifesize Alien Prop</p>
-        <p data-mce-fragment="1">Rubber Latex Alien doll</p>
-        <p data-mce-fragment="1">Foam Filled </p>
-        <p data-mce-fragment="1">Height: 3.8ft.</p>
-        <p data-mce-fragment="1">Weight: 6lbs. Approx.</p>
-        <br data-cke-eol="1" data-mce-fragment="1">
-`
-    },
+
     {
       id: '6947311288368',
       node: '1654636120767',
@@ -91,25 +111,7 @@ const allProducts = () => {
       description: `<p>LIL MAYO RUBBER MASK</p>
 `
     },
-    {
-      id: '6947312926768',
-      node: '1654636120767',
-      slug: 'mini-lil-mayo-alien-doll-mini-size',
-      name: 'Mini Lil Mayo Alien Doll  - Mini Size',
-      price: 99,
-      images: [
-        'https://res.cloudinary.com/healthbox/image/upload/v1654637356/lilmayo/4x4_ogdhwl.jpg',
-        'https://res.cloudinary.com/healthbox/image/upload/v1654637357/lilmayo/Sintitulo-3_kxpj2c.jpg',
-        'https://res.cloudinary.com/healthbox/image/upload/v1654637358/lilmayo/Sintitulo-6_sblgc8.jpg'
-      ],
-      description: `
-        <p data-mce-fragment="1">Mini Alien Prop - Mini Lil Mayo Alien Doll</p>
-        <p data-mce-fragment="1">Rubber Latex Alien doll</p>
-        <p data-mce-fragment="1">Height: 19 Inches (50cm)</p>
-        <p data-mce-fragment="1">Limited supply. </p>
-        <p data-mce-fragment="1">Weight: 1 lbs. Approx.</p>
-`
-    },
+
     {
       id: '6947315810352',
       node: '1654636120767',
