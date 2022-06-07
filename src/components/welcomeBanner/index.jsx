@@ -37,7 +37,7 @@ const WelcomeBanner = () => {
 
           <div className="p-6 lg:p-12 lg:ml-60 lg:-mt-16 text-center sm:p-16 lg:p-8 lg:text-left z-40">
             <div className="max-w-lg mx-auto lg:ml-0 lg:pt-12">
-              <Link href="/dolls/lil-mayo-alien-doll">
+              <Link href="/dolls/lil-mayo-alien-doll-premium-lifesize-alien-prop">
                 <a
                   className="mt-8 relative inline-block text-sm lg:font-medium text-orange-600 group active:text-orange-500 focus:outline-none focus:ring"
                 >
