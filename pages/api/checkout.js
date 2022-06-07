@@ -18,6 +18,11 @@ export default async function handler (req, res) {
   })
 
   validProducts.map((product) => {
+    // dynamic_tax_rates: [
+    //   '{{FIRST_TAX_RATE_ID}}',
+    //   '{{SECOND_TAX_RATE_ID}}',
+    //   // additional tax rates
+    // ],
     const newItem = {
       price_data: {
         currency: 'usd',
@@ -27,6 +32,11 @@ export default async function handler (req, res) {
         unit_amount: product.price * 100,
       },
       quantity: parseInt(product.quantity) || 1,
+      dynamic_tax_rates: ['txr_1KrjjEJiKjtN9wFfRTufhvez'],
+      adjustable_quantity: {
+        enabled: true,
+        maximum: 10,
+      }
     }
     allItems.push(newItem)
   })
@@ -34,15 +44,19 @@ export default async function handler (req, res) {
     const session = await stripe.checkout.sessions.create({
       line_items: allItems,
       shipping_address_collection: {
-        allowed_countries: ['US', 'CA', 'MX'],
+        allowed_countries: ['US', 'CA', 'MX', 'PL'],
       },
       allow_promotion_codes: true,
       shipping_options: [
         {
-          shipping_rate: 'shr_1Kq7i1JiKjtN9wFfWdV34AX0',
-        },
-        {
-          shipping_rate: 'shr_1Kq7hcJiKjtN9wFfUhDjJq4k',
+          shipping_rate_data: {
+            fixed_amount: {
+              amount: 49 * 100,
+              currency: 'USD',
+            },
+            type: 'fixed_amount',
+            display_name: 'Shipping',
+          }
         },
       ],
       mode: 'payment',

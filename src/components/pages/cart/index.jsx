@@ -36,8 +36,7 @@ const CartPageComponent = ({ products = [] }) => {
       })).json()
       if (createPaymentLinkResponse.errors.length >= 1) {
         setLoading(false)
-        // toast.error(createPaymentLinkResponse.errors[0] || 'There was an error')
-        console.log(createPaymentLinkResponse, "L")
+        toast.error(createPaymentLinkResponse.errors[0] || 'There was an error')
         return
       }
       toast.success('Redirecting to payment page')

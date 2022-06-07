@@ -27,6 +27,7 @@ const ProductFullItem = ({ product }) => {
             src={product.images[0]}
             layout="fill"
           />
+
         </div>
         <div className="w-full lg:w-2/4 space-y-6 lg:space-y-12 lg:px-8 px-2">
           <ProductInfo product={product}/>
