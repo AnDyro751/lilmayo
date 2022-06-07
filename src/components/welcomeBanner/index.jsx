@@ -23,7 +23,7 @@ const WelcomeBanner = () => {
           <div className="h-full absolute h-xl w-full z-40 rounded-3xl shadow-2xl"
           style={{
             "clipPath": "polygon(0 25%, 0 100%, 100% 100%, 56% 67%, 39% 42%)",
-            backgroundColor: "#7d5427"
+            backgroundColor: "#d97706"
           }}
           >
           </div>
@@ -32,7 +32,7 @@ const WelcomeBanner = () => {
           <Image src={lil} layout="fill" objectFit="cover" className="shadow-2xl"/>
         </div>
         <aside
-          className="lg:h-xl -mt-12 lg:-mt-20 shadow-[0_4px_0_0_rgba(0,0,0,1)] border-2 border-black rounded-xl lg:rounded-3xl overflow-hidden z-50 overflow-hidden text-white lg:grid bg-gradient-to-r from-orange-400 to-orange-700 lg:grid-cols-2 lg:items-center"
+          className="lg:h-xl -mt-12 lg:-mt-20 border-2 border-black rounded-xl lg:rounded-3xl overflow-hidden z-50 overflow-hidden text-white lg:grid bg-black lg:grid-cols-2 lg:items-center"
         >
 
           <div className="p-6 lg:p-12 lg:ml-60 lg:-mt-16 text-center sm:p-16 lg:p-8 lg:text-left z-40">
