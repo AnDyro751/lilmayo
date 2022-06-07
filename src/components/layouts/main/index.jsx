@@ -10,7 +10,7 @@ const MainLayout = ({ seo, children, breadcrumbs }) => {
   return (
     <div>
       <Head>
-        <title>{title}</title>
+        <title>{`${title} | Lil Mayo Shop`}</title>
         <meta name="description" content={`${title} | Buy Lil Mayo Doll`}/>
         <meta name="keywords" content="shop, toy,lil mayo,lil,alien,mayo,doll,stripe,visa,checkout,merch,toys"/>
         <meta property="og:url"

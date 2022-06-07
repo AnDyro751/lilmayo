@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import image from '../../../public/banner1.webp'
-import imageCta from '../../../public/aa26bd779bb644934077998e83557a61.jpg'
+import imageCta from '../../../public/imgcta.JPG'
 import Link from 'next/link'
 import lil from '../../../public/lil.png'
 

@@ -13,7 +13,7 @@ const ProductInfo = ({ product }) => {
         )
       }
       <section className="mt-4">
-        <div className="relative" id={`product-component-${product.node}`}/>
+        <div className="relative" id={`product-component-1654636082442`}/>
       </section>
     </>
   )

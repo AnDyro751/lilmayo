@@ -37,7 +37,7 @@ const ProductPage = ({ product }) => {
           ShopifyBuy.UI.onReady(client).then(function (ui) {
             ui.createComponent('product', {
               id: product.id,
-              node: document.getElementById(`product-component-${product.node}`),
+              node: document.getElementById(`product-component-1654636082442`),
               moneyFormat: '%24%20%7B%7Bamount%7D%7D',
               options: {
                 'product': {
