@@ -23,7 +23,7 @@ const allProducts = () => {
 `
     },
     {
-      id: '6947309879344',
+      id: '6947609772080',
       node: '1654636120767',
       slug: 'test',
       name: 'Test',
