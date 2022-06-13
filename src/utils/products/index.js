@@ -23,19 +23,6 @@ const allProducts = () => {
 `
     },
     {
-      id: '6947609772080',
-      node: '1654636120767',
-      slug: 'test',
-      name: 'Test',
-      price: 1,
-      images: [
-        'https://res.cloudinary.com/healthbox/image/upload/v1654637163/lilmayo/9999999999999999_ryvlcu.jpg',
-      ],
-      description: `
-        <p data-mce-fragment="1">Test de producto</p>
-`
-    },
-    {
       id: '6947312926768',
       node: '1654636120767',
       slug: 'mini-lil-mayo-alien-doll-mini-size',
